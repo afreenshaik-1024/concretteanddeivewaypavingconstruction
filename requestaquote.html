@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Concrete & Driveway Paving Contractor</title>
+
+    <link rel="stylesheet" href="requestquote.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <main class="quote-page">
+        <div class="quote-bg"></div>
+        <div class="quote-overlay"></div>
+
+        <div class="quote-container">
+
+            <div class="quote-info">
+
+                <span class="quote-label">
+                    GET A FREE QUOTE
+                </span>
+
+
+                <h1>
+                    Let's Build Your
+                    <span>Next Project</span>
+                </h1>
+
+
+                <p>
+                    Tell us about your concrete or driveway paving
+                    project. Our team will review your requirements
+                    and get back to you with a clear, professional
+                    estimate.
+                </p>
+
+                <div class="quote-points">
+
+                    <div class="quote-point">
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>
+                                Free Estimates
+                            </h3>
+
+                            <p>
+                                No obligation quote for your project.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="quote-point">
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>
+                                Quality Workmanship
+                            </h3>
+
+                            <p>
+                                Professional concrete and paving solutions.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="quote-point">
+
+                        <div class="point-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h3>
+                                Clear Pricing
+                            </h3>
+
+                            <p>
+                                Transparent pricing with no hidden costs.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="quote-form-card">
+
+                <div class="quote-top-controls">
+
+                <a href="index.html" class="quote-back-btn">
+    <span>←</span>
+    Back
+</a>
+
+                    <button
+                        type="button"
+                        id="quoteRtlBtn"
+                        class="quote-control-btn"
+                        aria-label="Toggle RTL"
+                    >
+                        RTL
+                    </button>
+
+                    <button
+                        type="button"
+                        id="quoteThemeBtn"
+                        class="quote-control-btn"
+                        aria-label="Toggle Light and Dark Mode"
+                    >
+                        ☾
+                    </button>
+
+
+                </div>
+
+                <div class="form-heading">
+
+                    <span>
+                        PROJECT DETAILS
+                    </span>
+
+                    <h2>
+                        Request Your Quote
+                    </h2>
+
+                    <p>
+                        Fill in the details below and we'll contact you.
+                    </p>
+
+                </div>
+
+                <form
+                    class="quote-form"
+                    id="quoteForm"
+                >
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Your name"
+                                autocomplete="name"
+                                required
+                            >
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Your phone number"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="service">
+                                Service Required
+                            </label>
+
+                            <select
+                                id="service"
+                                name="service"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option value="driveway-paving">
+                                    Driveway Paving
+                                </option>
+
+                                <option value="concrete-driveway">
+                                    Concrete Driveway
+                                </option>
+
+                                <option value="concrete-walkway">
+                                    Concrete Walkway
+                                </option>
+
+                                <option value="patio">
+                                    Concrete Patio
+                                </option>
+
+                                <option value="paver-installation">
+                                    Paver Installation
+                                </option>
+
+                                <option value="concrete-replacement">
+                                    Concrete Replacement
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="property">
+                                Property Type
+                            </label>
+
+                            <select
+                                id="property"
+                                name="property"
+                            >
+
+                                <option value="">
+                                    Select property type
+                                </option>
+
+                                <option value="residential">
+                                    Residential
+                                </option>
+
+                                <option value="commercial">
+                                    Commercial
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="size">
+                                Approx. Project Size
+                            </label>
+
+                            <input
+                                type="text"
+                                id="size"
+                                name="size"
+                                placeholder="Example: 500 sq. ft."
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group full-width">
+
+                        <label for="message">
+                            Project Details
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="3"
+                            placeholder="Tell us about your project..."
+                        ></textarea>
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="quote-btn"
+                    >
+
+                        <span>
+                            Get My Free Quote
+                        </span>
+
+                        <span class="quote-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                    <div
+                        class="quote-success"
+                        id="quoteSuccess"
+                    >
+                        Thank you! Your quote request has been
+                        submitted successfully.
+                    </div>
+
+                    <p class="form-note">
+                        We respect your privacy. Your information will only
+                        be used to contact you about your project.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const rtlBtn =
+                document.getElementById("quoteRtlBtn");
+
+
+            const savedDirection =
+                localStorage.getItem("quoteDirection");
+
+
+            if (savedDirection === "rtl") {
+
+                document.documentElement.dir = "rtl";
+
+                if (rtlBtn) {
+                    rtlBtn.textContent = "LTR";
+                }
+
+            }
+
+
+            if (rtlBtn) {
+
+                rtlBtn.addEventListener("click", function () {
+
+                    const isRTL =
+                        document.documentElement.dir === "rtl";
+
+
+                    document.documentElement.dir =
+                        isRTL ? "ltr" : "rtl";
+
+
+                    rtlBtn.textContent =
+                        isRTL ? "RTL" : "LTR";
+
+
+                    localStorage.setItem(
+                        "quoteDirection",
+                        isRTL ? "ltr" : "rtl"
+                    );
+
+                });
+
+            }
+
+            const themeBtn =
+                document.getElementById("quoteThemeBtn");
+
+
+            const savedTheme =
+                localStorage.getItem("theme");
+
+
+            if (savedTheme === "dark") {
+
+                document.body.classList.add("dark-mode");
+
+                if (themeBtn) {
+                    themeBtn.textContent = "☀";
+                }
+
+            }
+
+
+            if (themeBtn) {
+
+                themeBtn.addEventListener("click", function () {
+
+                    document.body.classList.toggle("dark-mode");
+
+
+                    const darkMode =
+                        document.body.classList.contains("dark-mode");
+
+
+                    localStorage.setItem(
+                        "theme",
+                        darkMode ? "dark" : "light"
+                    );
+
+
+                    themeBtn.textContent =
+                        darkMode ? "☀" : "☾";
+
+                });
+
+            }
+
+            const quoteForm =
+                document.getElementById("quoteForm");
+
+
+            const quoteSuccess =
+                document.getElementById("quoteSuccess");
+
+
+            if (quoteForm) {
+
+                quoteForm.addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+
+                        if (quoteSuccess) {
+
+                            quoteSuccess.classList.add("show");
+
+                        }
+
+
+                        quoteForm.reset();
+
+                    }
+                );
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
