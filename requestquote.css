@@ -299,8 +299,8 @@ body.dark-mode .quote-overlay {
     border: 1px solid var(--border);
     border-radius: 8px;
 
-    background: var(--light);
-    color: var(--black);
+    background: var(--primary);
+    color: var(--white);
 
     font-family: "Poppins", sans-serif;
     font-size: 11px;
@@ -326,9 +326,9 @@ body.dark-mode .quote-overlay {
 
 
 .quote-back-btn:hover {
-    background: var(--primary);
+    background: var(--secondary);
 
-    border-color: var(--primary);
+    border-color: var(--secondary);
 
     color: #ffffff;
 
@@ -349,9 +349,9 @@ body.dark-mode .quote-overlay {
 
     border-radius: 8px;
 
-    background: var(--light);
+    background: var(--secondary);
 
-    color: var(--black);
+    color: var(--white);
 
     font-family: "Poppins", sans-serif;
 
@@ -369,9 +369,9 @@ body.dark-mode .quote-overlay {
 
 
 .quote-control-btn:hover {
-    background: var(--primary);
+    background: var(--secondary);
 
-    border-color: var(--primary);
+    border-color: var(--secondary);
 
     color: #ffffff;
 

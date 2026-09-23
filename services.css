@@ -332,7 +332,6 @@ body.dark-mode .logo small {
 
     gap: 12px;
 }
-
 .action-btn {
     height: 50px;
     min-width: 50px;
@@ -341,9 +340,9 @@ body.dark-mode .logo small {
 
     border: 1px solid var(--border);
     border-radius: 11px;
-
-    background: var(--white);
-    color: var(--black);
+        
+    background: var(--secondary);
+    color: var(--white);
 
     font-size: 14px;
     font-weight: 600;
@@ -353,9 +352,8 @@ body.dark-mode .logo small {
 
 .action-btn:hover {
     border-color: var(--secondary);
-    color: var(--secondary);
+    color: var(--white);
 }
-
 .theme-btn {
     width: 50px;
     padding: 0;
@@ -462,6 +460,9 @@ body.rtl .nav-actions {
     .action-btn {
         height: 46px;
         min-width: 46px;
+         background: var(--secondary);
+    color: var(--white);
+
     }
 
     .login-btn {
