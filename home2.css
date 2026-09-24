@@ -3545,6 +3545,50 @@ body.dark-mode .footer-logo small {
     }
 }
 
+body.dark-mode .quality-section {
+    background: var(--black);
+}
+
+body.dark-mode .quality-heading h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .quality-heading h2 span {
+    color: var(--primary);
+}
+
+body.dark-mode .quality-heading p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+body.dark-mode .quality-card {
+    background: rgba(3, 6, 11, 0.68);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .quality-card h3 {
+    color: #ffffff;
+}
+
+body.dark-mode .quality-card p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+body.dark-mode .quality-number {
+    color: rgba(255, 255, 255, 0.30);
+}
+
+body.dark-mode .quality-icon {
+    color: var(--primary);
+}
+
+body.dark-mode .quality-btn {
+    color: #ffffff;
+}
+
+body.dark-mode .quality-btn:hover {
+    color: #000000;
+}
 .faq-section {
     position: relative;
     width: 100%;
