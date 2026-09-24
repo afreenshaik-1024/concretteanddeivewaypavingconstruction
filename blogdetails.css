@@ -1167,7 +1167,6 @@ body.dark-mode .footer-logo small {
         text-align: center;
     }
 }
-
 .blog-details-hero {
     --blog-primary: var(--primary, #e0a72f);
     --blog-secondary: var(--secondary, #111111);
