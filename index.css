@@ -1180,14 +1180,16 @@ body.dark-mode .footer-logo small {
 
     overflow: hidden;
 }
+
 .hero-overlay {
     position: absolute;
     inset: 0;
 
-    background: rgba(0, 0, 0, 0.62);
+    background: rgba(3, 6, 11, 0.62);
 
     z-index: 1;
 }
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -1196,10 +1198,10 @@ body.dark-mode .footer-logo small {
     max-width: 900px;
 
     text-align: center;
-    color: #ffffff;
 
     padding: 40px 20px;
 }
+
 .hero-subtitle {
     margin-bottom: 18px;
 
@@ -1208,8 +1210,9 @@ body.dark-mode .footer-logo small {
     letter-spacing: 2px;
     text-transform: uppercase;
 
-    color: var(--white);
+    color: #ffffff;
 }
+
 .hero-content h1 {
     margin: 0 auto 22px;
 
@@ -1221,9 +1224,11 @@ body.dark-mode .footer-logo small {
 
     color: var(--primary);
 }
-.hero-content h1 span{
+
+.hero-content h1 span {
     color: var(--secondary);
 }
+
 .hero-description {
     max-width: 700px;
     margin: 0 auto 35px;
@@ -1233,12 +1238,13 @@ body.dark-mode .footer-logo small {
 
     color: rgba(255, 255, 255, 0.88);
 }
+
 .hero-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
 
+    gap: 18px;
     flex-wrap: wrap;
 }
 
@@ -1250,38 +1256,48 @@ body.dark-mode .footer-logo small {
     min-width: 160px;
     padding: 14px 28px;
 
-    border-radius: 4px;
+    border-radius: 10px;
 
     text-decoration: none;
+
     font-size: 15px;
     font-weight: 700;
 
-    transition: 0.3s ease;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
 }
+
 .btn-primary {
-    background: #f59e0b;
+    background: var(--primary);
     color: #111827;
-    border-radius: 10px;
-    border: 2px solid #f59e0b;
+
+    border: 2px solid var(--primary);
 }
 
 .btn-primary:hover {
-    background:var(--secondary);
+    background: var(--secondary);
     color: #ffffff;
-    border-radius: 10px;
+
+    border-color: var(--secondary);
+
     transform: translateY(-3px);
 }
+
 .btn-outline {
     background: transparent;
     color: #ffffff;
-     border-radius: 10px;
+
     border: 2px solid #ffffff;
 }
 
 .btn-outline:hover {
     background: #ffffff;
     color: #111827;
-     border-radius: 10px;
+
     transform: translateY(-3px);
 }
 
@@ -1290,20 +1306,45 @@ body.dark-mode .hero-section {
 }
 
 body.dark-mode .hero-overlay {
-    background: rgba(0, 0, 0, 0.68);
+    background: rgba(3, 6, 11, 0.70);
+}
+
+body.dark-mode .hero-subtitle {
+    color: #ffffff;
 }
 
 body.dark-mode .hero-content h1 {
     color: #ffffff;
 }
 
+body.dark-mode .hero-content h1 span {
+    color: var(--primary);
+}
+
 body.dark-mode .hero-description {
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.90);
+}
+
+body.dark-mode .btn-primary {
+    background: var(--primary);
+    color: #01040a;
+    border-color: var(--primary);
+}
+
+body.dark-mode .btn-primary:hover {
+    background: var(--secondary);
+    color: #ffffff;
+    border-color: var(--secondary);
 }
 
 body.dark-mode .btn-outline {
     color: #ffffff;
     border-color: #ffffff;
+}
+
+body.dark-mode .btn-outline:hover {
+    background: #ffffff;
+    color: #01040a;
 }
 
 @media (max-width: 1024px) {
@@ -1325,7 +1366,6 @@ body.dark-mode .btn-outline {
         max-width: 650px;
         font-size: 16px;
     }
-
 }
 
 
@@ -1333,12 +1373,11 @@ body.dark-mode .btn-outline {
 
     .hero-section {
         min-height: 78vh;
-
         background-position: center center;
     }
 
     .hero-overlay {
-        background: rgba(0, 0, 0, 0.66);
+        background: rgba(3, 6, 11, 0.66);
     }
 
     .hero-content {
@@ -1376,24 +1415,6 @@ body.dark-mode .btn-outline {
     }
 }
 
-@media (max-width: 480px) {
-
-    .hero-section {
-        min-height: 82vh;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    .hero-subtitle {
-        font-size: 12px;
-    }
-}
 
 .about-section {
     position: relative;

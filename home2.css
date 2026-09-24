@@ -1166,7 +1166,6 @@ body.dark-mode .footer-logo small {
         text-align: center;
     }
 }
-
 .hero-section {
     position: relative;
 
@@ -1221,13 +1220,11 @@ body.dark-mode .footer-logo small {
     transform: scale(1);
 }
 
-
 .hero-slide.active img {
     animation: heroImageZoom 6s ease-out forwards;
 }
 
 @keyframes heroImageZoom {
-
     from {
         transform: scale(1);
     }
@@ -1235,7 +1232,6 @@ body.dark-mode .footer-logo small {
     to {
         transform: scale(1.08);
     }
-
 }
 
 .hero-overlay {
@@ -1275,7 +1271,6 @@ body.dark-mode .footer-logo small {
 }
 
 @keyframes heroContentReveal {
-
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -1285,7 +1280,6 @@ body.dark-mode .footer-logo small {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 .hero-eyebrow {
@@ -1312,7 +1306,7 @@ body.dark-mode .footer-logo small {
 .hero-content h1 {
     max-width: 750px;
 
-    color: var(--white);
+    color: #ffffff;
 
     font-size: clamp(52px, 7vw, 96px);
     line-height: 0.98;
@@ -1362,6 +1356,8 @@ body.dark-mode .footer-logo small {
     font-size: 13px;
     font-weight: 600;
 
+    text-decoration: none;
+
     transition: var(--transition);
 }
 
@@ -1373,11 +1369,16 @@ body.dark-mode .footer-logo small {
 
 .hero-btn-primary {
     background: var(--primary);
-    color: var(--white);
+    color: #01040a;
+
+    border: 1px solid var(--primary);
 }
 
 .hero-btn-primary:hover {
     background: var(--secondary);
+    border-color: var(--secondary);
+
+    color: #ffffff;
 
     transform: translateY(-3px);
 }
@@ -1391,16 +1392,16 @@ body.dark-mode .footer-logo small {
 
     background: rgba(255, 255, 255, 0.05);
 
-    color: var(--white);
+    color: #ffffff;
 
     backdrop-filter: blur(6px);
 }
 
 .hero-btn-outline:hover {
-    background: var(--white);
-    border-color: var(--white);
+    background: #ffffff;
+    border-color: #ffffff;
 
-    color: var(--black);
+    color: #01040a;
 
     transform: translateY(-3px);
 }
@@ -1467,14 +1468,12 @@ body.dark-mode .footer-logo small {
 }
 
 .hero-scroll-line {
+    position: relative;
+
     width: 45px;
     height: 1px;
 
     background: rgba(255, 255, 255, 0.5);
-}
-
-.hero-scroll-line {
-    position: relative;
 
     overflow: hidden;
 }
@@ -1496,7 +1495,6 @@ body.dark-mode .footer-logo small {
 }
 
 @keyframes scrollLine {
-
     0% {
         left: -100%;
     }
@@ -1508,7 +1506,64 @@ body.dark-mode .footer-logo small {
     100% {
         left: 100%;
     }
+}
 
+body.dark-mode .hero-section {
+    background: var(--black);
+}
+
+body.dark-mode .hero-overlay {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(1, 4, 10, 0.92) 0%,
+            rgba(1, 4, 10, 0.76) 42%,
+            rgba(1, 4, 10, 0.38) 75%,
+            rgba(1, 4, 10, 0.55) 100%
+        );
+}
+
+body.dark-mode .hero-content h1 {
+    color: #ffffff;
+}
+
+body.dark-mode .hero-content h1 span {
+    color: var(--primary);
+}
+
+body.dark-mode .hero-content p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+body.dark-mode .hero-btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #01040a;
+}
+
+body.dark-mode .hero-btn-primary:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+}
+
+body.dark-mode .hero-btn-outline {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .hero-btn-outline:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #01040a;
+}
+
+body.dark-mode .hero-counter {
+    color: rgba(255, 255, 255, 0.58);
+}
+
+body.dark-mode .hero-scroll {
+    color: rgba(255, 255, 255, 0.68);
 }
 
 @media (max-width: 1024px) {
@@ -1525,7 +1580,6 @@ body.dark-mode .footer-logo small {
 
     .hero-content {
         width: min(650px, 75%);
-
         padding-top: 10px;
     }
 
@@ -1551,7 +1605,6 @@ body.dark-mode .footer-logo small {
 
     .hero-btn {
         min-height: 50px;
-
         padding: 0 21px;
     }
 
@@ -1567,9 +1620,7 @@ body.dark-mode .footer-logo small {
     .hero-slide img {
         object-position: center center;
     }
-
 }
-
 
 @media (max-width: 768px) {
 
@@ -1625,7 +1676,6 @@ body.dark-mode .footer-logo small {
 
     .hero-actions {
         gap: 12px;
-
         margin-top: 26px;
     }
 
@@ -1650,9 +1700,7 @@ body.dark-mode .footer-logo small {
         left: 0;
         bottom: 22px;
     }
-
 }
-
 .about-section {
     position: relative;
 
