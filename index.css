@@ -203,7 +203,6 @@ body.dark-mode .logo small {
         letter-spacing: 0.3px;
     }
 }
-
 .nav-menu {
     justify-self: center;
 
@@ -228,6 +227,7 @@ body.dark-mode .logo small {
     white-space: nowrap;
 
     padding: 35px 0;
+    text-decoration: none;
 
     transition: color var(--transition);
 }
@@ -244,16 +244,23 @@ body.dark-mode .logo small {
     bottom: 25px;
 
     width: 0;
-    height: 2px;
+    height: 3px;
 
     background: var(--secondary);
 
-    transition: width var(--transition);
+    opacity: 1;
+    visibility: visible;
+
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+.nav-link.active {
+    color: var(--secondary);
 }
 
 .nav-link i {
@@ -262,12 +269,12 @@ body.dark-mode .logo small {
     transition: transform var(--transition);
 }
 
-.nav-dropdown:hover .nav-link i {
-    transform: rotate(180deg);
-}
-
 .nav-dropdown {
     position: relative;
+}
+
+.nav-dropdown:hover .nav-link i {
+    transform: rotate(180deg);
 }
 
 .dropdown-menu {
