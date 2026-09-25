@@ -76,6 +76,7 @@ a {
         background var(--transition),
         border-color var(--transition);
 }
+
 .nav-container {
     width: min(1180px, 92%);
     height: 100%;
@@ -106,6 +107,7 @@ a {
 
     position: relative;
 }
+
 .logo img {
     width: 82px;
     height: 80px;
@@ -116,6 +118,7 @@ a {
     display: block;
     flex-shrink: 0;
 }
+
 .logo > span {
     display: inline-block;
 
@@ -159,6 +162,7 @@ body.dark-mode .logo > span > span {
 body.dark-mode .logo small {
     color: var(--black);
 }
+
 @media (max-width: 1024px) {
 
     .logo img {
@@ -335,11 +339,9 @@ body.dark-mode .logo small {
 
     padding: 0 16px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 11px;
-        
-    background: var(--secondary);
-    color: var(--white);
+    color: var(--black);
 
     font-size: 14px;
     font-weight: 600;
@@ -350,6 +352,7 @@ body.dark-mode .logo small {
 .action-btn:hover {
     border-color: var(--secondary);
     color: var(--white);
+    background: var(--secondary);
 }
 
 .theme-btn {
@@ -458,8 +461,6 @@ body.rtl .nav-actions {
     .action-btn {
         height: 46px;
         min-width: 46px;
-         background: var(--secondary);
-    color: var(--white);
     }
 
     .login-btn {
@@ -505,7 +506,6 @@ body.rtl .nav-actions {
         display: none;
     }
 
-
     .mobile-controls {
         display: flex;
 
@@ -513,6 +513,7 @@ body.rtl .nav-actions {
 
         gap: 7px;
     }
+
     .mobile-controls .mobile-icon {
         height: 42px;
         min-width: 42px;
@@ -567,7 +568,6 @@ body.rtl .nav-actions {
     .menu-toggle:hover {
         background: rgba(37, 99, 235, 0.08);
     }
-
     .mobile-menu {
         display: flex;
 
@@ -704,6 +704,19 @@ body {
     color: var(--secondary);
 }
 
+body.dark-mode .action-btn,
+body.dark-mode .action-btn i,
+body.dark-mode .theme-btn,
+body.dark-mode .theme-btn i {
+    color: #000000 !important;
+}
+
+body.dark-mode .mobile-controls .mobile-icon,
+body.dark-mode .mobile-controls .mobile-icon i,
+body.dark-mode .mobile-controls .theme-btn,
+body.dark-mode .mobile-controls .theme-btn i {
+    color: #000000 !important;
+}
 .footer {
     background: var(--white);
     color: var(--black);
@@ -905,7 +918,7 @@ body.dark-mode .footer-logo small {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 50%;
 
     color: var(--black);
@@ -1262,7 +1275,7 @@ body.dark-mode .contact-hero-overlay {
 
     color: var(--black);
 
-    font-size: clamp(58px, 7vw, 96px);
+    font-size: 65px;
 
     line-height: 0.98;
 
@@ -1282,7 +1295,7 @@ body.dark-mode .contact-hero-overlay {
 
     margin: 38px 0 42px;
 
-    color: var(--gray);
+    color: var(--black);
 
     font-size: 18px;
 
@@ -1597,7 +1610,7 @@ body.dark-mode .contact-hero h1 span {
 
     color: var(--black);
 
-    font-size: clamp(34px, 4vw, 52px);
+    font-size: 50px;
 
     font-weight: 800;
 
@@ -2490,9 +2503,9 @@ body.dark-mode .contact-form-btn:hover {
 
     color: var(--black);
 
-    font-size: clamp(36px, 4vw, 54px);
+    font-size: 50px;
 
-    font-weight: 800;
+    font-weight: 700;
 
     line-height: 1.1;
 
@@ -3393,7 +3406,7 @@ body.dark-mode .contact-location-btn:hover {
 
     color: #ffffff;
 
-    font-size: clamp(40px, 5.5vw, 68px);
+    font-size:55px;
 
     font-weight: 800;
 

@@ -339,11 +339,9 @@ body.dark-mode .logo small {
 
     padding: 0 16px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 11px;
-        
-    background: var(--secondary);
-    color: var(--white);
+    color: var(--black);
 
     font-size: 14px;
     font-weight: 600;
@@ -354,6 +352,7 @@ body.dark-mode .logo small {
 .action-btn:hover {
     border-color: var(--secondary);
     color: var(--white);
+    background: var(--secondary);
 }
 
 .theme-btn {
@@ -462,8 +461,6 @@ body.rtl .nav-actions {
     .action-btn {
         height: 46px;
         min-width: 46px;
-         background: var(--secondary);
-    color: var(--white);
     }
 
     .login-btn {
@@ -707,6 +704,19 @@ body {
     color: var(--secondary);
 }
 
+body.dark-mode .action-btn,
+body.dark-mode .action-btn i,
+body.dark-mode .theme-btn,
+body.dark-mode .theme-btn i {
+    color: #000000 !important;
+}
+
+body.dark-mode .mobile-controls .mobile-icon,
+body.dark-mode .mobile-controls .mobile-icon i,
+body.dark-mode .mobile-controls .theme-btn,
+body.dark-mode .mobile-controls .theme-btn i {
+    color: #000000 !important;
+}
 .footer {
     background: var(--white);
     color: var(--black);
@@ -908,7 +918,7 @@ body.dark-mode .footer-logo small {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 50%;
 
     color: var(--black);
@@ -1215,7 +1225,7 @@ body.dark-mode .footer-logo small {
     letter-spacing: 2px;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: var(--primary);
 }
 
 .hero-content h1 {
@@ -1223,11 +1233,11 @@ body.dark-mode .footer-logo small {
 
     max-width: 850px;
 
-    font-size: clamp(38px, 5vw, 68px);
+    font-size: 62px;
     line-height: 1.1;
     font-weight: 800;
 
-    color: var(--primary);
+    color: var(--white);
 }
 
 .hero-content h1 span {
@@ -1448,14 +1458,14 @@ body.dark-mode .btn-outline:hover {
 
     padding-right: 15px;
     padding-bottom: 35px;
-    padding-left: 15px;
+    padding-left: 25%;
     
 }
 
 .about-image {
     position: relative;
 
-    width: 100%;
+    width: 90%;
     height: 520px;
 
     overflow: hidden;
@@ -1515,7 +1525,7 @@ body.dark-mode .btn-outline:hover {
 .experience-badge {
     position: absolute;
 
-    left: 30px;
+    left: 23%;
     bottom: 0;
 
     z-index: 5;
@@ -1715,7 +1725,12 @@ body.dark-mode .btn-outline:hover {
 
     gap: 28px;
 }
-
+.about-actions .btn,
+.about-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
 
 .about-actions .btn {
     min-height: 52px;
@@ -2700,15 +2715,19 @@ body.dark-mode .btn-outline:hover {
 .why-btn:hover i {
     transform: translateX(5px);
 }
-
 .why-phone {
     display: flex;
     align-items: center;
     gap: 11px;
-     border: 1px solid var(--primary);
+
+    border: 1px solid var(--primary);
+
     min-height: 52px;
-    padding: 0 24px;  
+    padding: 0 24px;
+
     border-radius: 10px;
+
+    transition: all var(--transition);
 }
 
 .why-phone > i {
@@ -2721,6 +2740,8 @@ body.dark-mode .btn-outline:hover {
     color: var(--primary);
 
     font-size: 13px;
+
+    transition: all var(--transition);
 }
 
 .why-phone span {
@@ -2729,11 +2750,13 @@ body.dark-mode .btn-outline:hover {
     margin-bottom: 2px;
 
     color: var(--gray);
-    
+
     font-size: 9px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .8px;
+
+    transition: color var(--transition);
 }
 
 .why-phone strong {
@@ -2743,6 +2766,23 @@ body.dark-mode .btn-outline:hover {
 
     font-size: 13px;
     font-weight: 800;
+
+    transition: color var(--transition);
+}
+
+.why-phone:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+.why-phone:hover > i {
+    color: var(--white);
+}
+
+.why-phone:hover span,
+.why-phone:hover strong {
+    color: var(--white);
 }
 
 @keyframes whyImageReveal {
@@ -2772,6 +2812,32 @@ body.dark-mode .btn-outline:hover {
 
 }
 
+.why-phone {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.why-phone:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    transform: translateY(-2px);
+}
+
+.why-phone:hover > i {
+    color: #ffffff !important;
+}
+
+.why-phone:hover span {
+    color: #ffffff !important;
+}
+
+.why-phone:hover strong {
+    color: #ffffff !important;
+}
 @media (max-width: 1024px) {
 
     .why-section {

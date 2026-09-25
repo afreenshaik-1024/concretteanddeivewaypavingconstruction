@@ -339,11 +339,9 @@ body.dark-mode .logo small {
 
     padding: 0 16px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 11px;
-        
-    background: var(--secondary);
-    color: var(--white);
+    color: var(--black);
 
     font-size: 14px;
     font-weight: 600;
@@ -354,6 +352,7 @@ body.dark-mode .logo small {
 .action-btn:hover {
     border-color: var(--secondary);
     color: var(--white);
+    background: var(--secondary);
 }
 
 .theme-btn {
@@ -462,8 +461,6 @@ body.rtl .nav-actions {
     .action-btn {
         height: 46px;
         min-width: 46px;
-         background: var(--secondary);
-    color: var(--white);
     }
 
     .login-btn {
@@ -707,6 +704,19 @@ body {
     color: var(--secondary);
 }
 
+body.dark-mode .action-btn,
+body.dark-mode .action-btn i,
+body.dark-mode .theme-btn,
+body.dark-mode .theme-btn i {
+    color: #000000 !important;
+}
+
+body.dark-mode .mobile-controls .mobile-icon,
+body.dark-mode .mobile-controls .mobile-icon i,
+body.dark-mode .mobile-controls .theme-btn,
+body.dark-mode .mobile-controls .theme-btn i {
+    color: #000000 !important;
+}
 .footer {
     background: var(--white);
     color: var(--black);
@@ -908,7 +918,7 @@ body.dark-mode .footer-logo small {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 50%;
 
     color: var(--black);
@@ -1287,15 +1297,11 @@ body.dark-mode .footer-logo small {
 
     max-width: 800px;
 
-    font-size: clamp(
-        48px,
-        6.3vw,
-        88px
-    );
+    font-size: 60px;
 
     line-height: 0.98;
 
-    font-weight: 500;
+    font-weight: 600;
 
     letter-spacing: -0.045em;
 
@@ -1474,11 +1480,7 @@ body.dark-mode .service-btn-secondary:hover {
     }
 
     .service-hero-content h1 {
-        font-size: clamp(
-            46px,
-            7vw,
-            70px
-        );
+        font-size:50px;
     }
 
     .service-hero-content p {
@@ -1650,7 +1652,7 @@ body.dark-mode .service-btn-secondary:hover {
     width: 30px;
     height: 2px;
 
-    background: var(--secondary, #222);
+    background: var(--primary, #222);
 
     transition: background 0.3s ease;
 }
@@ -1742,11 +1744,14 @@ body.dark-mode .service-btn-secondary:hover {
 }
 
 .service-intro-btn:hover::before {
-    transform: translateX(0);
+    background: var(--secondary);
+    color: var(--white);
 }
 
 .service-intro-btn:hover {
     transform: translateY(-3px);
+     background: var(--secondary);
+    color: var(--white);
 }
 
 .service-arrow {
@@ -1921,7 +1926,7 @@ body.dark-mode .service-btn-secondary:hover {
     width: 30px;
     height: 2px;
 
-    background: var(--primary, #c89b3c);
+    background: var(--primary, --primary);
 }
 
 .testimonials-heading h2 {
@@ -1929,7 +1934,7 @@ body.dark-mode .service-btn-secondary:hover {
 
     max-width: 650px;
 
-    font-size: clamp(42px, 5vw, 64px);
+    font-size: 55px;
 
     line-height: 1.05;
     letter-spacing: -2px;
@@ -1940,7 +1945,7 @@ body.dark-mode .service-btn-secondary:hover {
 .testimonials-heading h2 span {
     display: block;
 
-    color: var(--primary, #c89b3c);
+    color: var(--primary, --primary);
 }
 
 .testimonials-track {
@@ -2372,7 +2377,7 @@ body.dark-mode .service-btn-secondary:hover {
 .architecture-content h2 {
     margin: 0 0 28px;
 
-    font-size: clamp(42px, 4.4vw, 64px);
+    font-size: 55px;
 
     line-height: 1.04;
 
@@ -2475,15 +2480,18 @@ body.dark-mode .service-btn-secondary:hover {
 }
 
 .architecture-btn:hover::before {
-    transform: translateX(0);
+      background: var(--secondary);
+    color: var(--white);
 }
 
 .architecture-btn:hover {
-    transform: translateY(-3px);
+      background: var(--secondary);
+    color: var(--white);
 }
 
 .architecture-btn:hover strong {
-    transform: translate(4px, -4px);
+      background: var(--secondary);
+    color: var(--white);
 }
 
 .dark-mode .architecture-section {
@@ -2675,7 +2683,7 @@ body.dark-mode .service-btn-secondary:hover {
 .faq-intro h2 {
     margin: 0 0 25px;
 
-    font-size: clamp(42px, 4.5vw, 62px);
+    font-size:52px;
 
     line-height: 1.04;
 
@@ -2689,7 +2697,7 @@ body.dark-mode .service-btn-secondary:hover {
 .faq-intro h2 span {
     display: block;
 
-    color: var(--primary, #c89b3c);
+    color: var(--primary, --primary);
 }
 
 .faq-intro p {
@@ -2774,11 +2782,13 @@ body.dark-mode .service-btn-secondary:hover {
 }
 
 .faq-btn:hover::before {
-    transform: translateX(0);
+    background: var(--secondary);
+    color: var(--white);
 }
 
 .faq-btn:hover {
-    transform: translateY(-3px);
+     background: var(--secondary);
+    color: var(--white);
 }
 
 .faq-btn:hover strong {
@@ -3086,7 +3096,7 @@ body.dark-mode .service-btn-secondary:hover {
 .final-cta {
     position: relative;
     width: 100%;
-    min-height: 620px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3165,7 +3175,7 @@ body.dark-mode .service-btn-secondary:hover {
 
     max-width: 850px;
 
-    font-size: clamp(48px, 6vw, 82px);
+    font-size: 55px;
     line-height: 1.02;
     font-weight: 800;
 

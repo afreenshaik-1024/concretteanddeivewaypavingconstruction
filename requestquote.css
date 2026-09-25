@@ -981,3 +981,124 @@ body.dark-mode .quote-control-btn:hover {
     }
 
 }
+/* =========================
+   PAVEPRO BRAND - LEFT SIDE
+========================= */
+
+.quote-brand {
+    position: fixed;
+    top: 32px;
+    left: 45px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    z-index: 9999;
+
+    width: max-content;
+}
+
+.quote-brand img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+    display: block;
+
+    flex-shrink: 0;
+
+    transition: var(--transition);
+}
+
+.quote-brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+.quote-brand-name {
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1;
+
+    letter-spacing: -0.5px;
+}
+
+.quote-brand-name span {
+    color: var(--primary);
+}
+
+.quote-brand-text small {
+    color: rgba(255, 255, 255, 0.9);
+
+    font-size: 10px;
+    font-weight: 500;
+
+    line-height: 1.2;
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+.quote-brand:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    .quote-brand {
+        top: 24px;
+        left: 28px;
+    }
+
+    .quote-brand img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .quote-brand-name {
+        font-size: 22px;
+    }
+
+    .quote-brand-text small {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .quote-brand {
+        top: 18px;
+        left: 18px;
+        gap: 8px;
+    }
+
+    .quote-brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .quote-brand-name {
+        font-size: 19px;
+    }
+
+    .quote-brand-text small {
+        font-size: 8px;
+        letter-spacing: 0.4px;
+    }
+}

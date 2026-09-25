@@ -339,11 +339,9 @@ body.dark-mode .logo small {
 
     padding: 0 16px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 11px;
-        
-    background: var(--secondary);
-    color: var(--white);
+    color: var(--black);
 
     font-size: 14px;
     font-weight: 600;
@@ -354,6 +352,7 @@ body.dark-mode .logo small {
 .action-btn:hover {
     border-color: var(--secondary);
     color: var(--white);
+    background: var(--secondary);
 }
 
 .theme-btn {
@@ -462,8 +461,6 @@ body.rtl .nav-actions {
     .action-btn {
         height: 46px;
         min-width: 46px;
-         background: var(--secondary);
-    color: var(--white);
     }
 
     .login-btn {
@@ -707,6 +704,19 @@ body {
     color: var(--secondary);
 }
 
+body.dark-mode .action-btn,
+body.dark-mode .action-btn i,
+body.dark-mode .theme-btn,
+body.dark-mode .theme-btn i {
+    color: #000000 !important;
+}
+
+body.dark-mode .mobile-controls .mobile-icon,
+body.dark-mode .mobile-controls .mobile-icon i,
+body.dark-mode .mobile-controls .theme-btn,
+body.dark-mode .mobile-controls .theme-btn i {
+    color: #000000 !important;
+}
 .footer {
     background: var(--white);
     color: var(--black);
@@ -908,7 +918,7 @@ body.dark-mode .footer-logo small {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 50%;
 
     color: var(--black);
@@ -1171,41 +1181,31 @@ body.dark-mode .footer-logo small {
 }
 .about-hero {
     position: relative;
-
     width: 100%;
     height: 90vh;
     min-height: 600px;
     max-height: 900px;
-
     display: flex;
     align-items: center;
-
     overflow: hidden;
-
     background: var(--black);
 }
 
 .about-hero-bg {
     position: absolute;
     inset: 0;
-
     width: 100%;
     height: 100%;
-
     z-index: 0;
 }
 
 .about-hero-bg img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
     object-position: center;
-
     transform: scale(1.02);
-
     transition: transform 1.2s ease;
 }
 
@@ -1216,9 +1216,7 @@ body.dark-mode .footer-logo small {
 .about-hero-overlay {
     position: absolute;
     inset: 0;
-
     z-index: 1;
-
     background:
         linear-gradient(
             90deg,
@@ -1232,12 +1230,9 @@ body.dark-mode .footer-logo small {
 .about-hero-container {
     position: relative;
     z-index: 2;
-
     width: min(1200px, calc(100% - 80px));
     height: 100%;
-
     margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1246,88 +1241,132 @@ body.dark-mode .footer-logo small {
 .about-hero-content {
     width: 100%;
     max-width: 760px;
-
     padding-top: 20px;
 }
 
 .about-hero-eyebrow {
     position: relative;
-
     display: inline-flex;
     align-items: center;
-
     gap: 13px;
-
     margin-bottom: 24px;
-
     color: var(--primary);
-
     font-size: 12px;
     font-weight: 600;
-
     letter-spacing: 4px;
     text-transform: uppercase;
 }
 
 .about-hero-eyebrow::before {
     content: "";
-
     width: 38px;
     height: 2px;
-
     background: var(--primary);
 }
 
 .about-hero h1 {
     margin: 0;
-
     color: #ffffff;
-
-    font-size: 80px !important;
+    font-size: 60px !important;
     font-weight: 600;
-
     line-height: 1.04;
     letter-spacing: -2.5px;
 }
 
 .about-hero h1 span {
     display: block;
-
     color: var(--secondary);
 }
 
 .about-hero-content p {
     max-width: 600px;
-
     margin-top: 28px;
-
     color: rgba(255, 255, 255, 0.82);
-
     font-size: 17px;
     font-weight: 400;
-
     line-height: 1.8;
 }
 
-.about-breadcrumb {
-    position: absolute;
-
-    left: 0;
-    bottom: 42px;
-
+.about-hero-buttons {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    margin-top: 30px;
+}
 
+.about-hero-btn {
+    min-width: 185px;
+    min-height: 52px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.about-hero-btn i {
+    font-size: 12px;
+    transition: transform var(--transition);
+}
+
+.about-hero-btn:hover {
+    transform: translateY(-2px);
+}
+
+.about-hero-btn:hover i {
+    transform: translateX(5px);
+}
+
+.about-hero-btn.primary-btn {
+    background: var(--primary);
+    color: #ffffff;
+    border: 1px solid var(--primary);
+}
+
+.about-hero-btn.primary-btn:hover {
+    background: var(--secondary);
+    color: #ffffff;
+}
+
+
+/* SECONDARY BUTTON */
+
+.about-hero-btn.secondary-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.about-hero-btn.secondary-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+}
+
+
+.about-breadcrumb {
+    position: absolute;
+    left: 0;
+    bottom: 42px;
+    display: flex;
+    align-items: center;
     gap: 12px;
-
     color: rgba(255, 255, 255, 0.65);
-
     font-size: 13px;
 }
 
 .about-breadcrumb a {
     color: #ffffff;
-
     transition: var(--transition);
 }
 
@@ -1342,11 +1381,6 @@ body.dark-mode .footer-logo small {
 .about-breadcrumb span a:last-child {
     color: var(--primary);
 }
-
-
-/* =========================
-   DARK MODE
-========================= */
 
 body.dark-mode .about-hero {
     background: var(--black);
@@ -1395,11 +1429,6 @@ body.dark-mode .about-breadcrumb span a:last-child {
     color: var(--primary);
 }
 
-
-/* =========================
-   1024px
-========================= */
-
 @media (max-width: 1024px) {
 
     .about-hero {
@@ -1417,7 +1446,6 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .about-hero-eyebrow {
         margin-bottom: 20px;
-
         font-size: 11px;
         letter-spacing: 3.5px;
     }
@@ -1434,24 +1462,20 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .about-hero-content p {
         max-width: 560px;
-
         margin-top: 24px;
-
         font-size: 16px;
         line-height: 1.7;
     }
 
+    .about-hero-buttons {
+        margin-top: 26px;
+    }
+
     .about-breadcrumb {
         bottom: 32px;
-
         font-size: 12px;
     }
 }
-
-
-/* =========================
-   768px
-========================= */
 
 @media (max-width: 768px) {
 
@@ -1463,7 +1487,6 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .about-hero-bg img {
         object-position: center center;
-
         transform: scale(1.04);
     }
 
@@ -1493,7 +1516,6 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .about-hero-container {
         width: calc(100% - 40px);
-
         margin: 0 auto;
     }
 
@@ -1504,9 +1526,7 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .about-hero-eyebrow {
         gap: 10px;
-
         margin-bottom: 18px;
-
         font-size: 10px;
         letter-spacing: 3px;
     }
@@ -1524,19 +1544,29 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .about-hero-content p {
         max-width: 500px;
-
         margin-top: 20px;
-
         font-size: 15px;
         line-height: 1.7;
+    }
+
+    .about-hero-buttons {
+        justify-content: flex-start;
+        gap: 12px;
+        margin-top: 24px;
+        flex-wrap: wrap;
+    }
+
+    .about-hero-btn {
+        min-width: 165px;
+        min-height: 48px;
+        padding: 0 18px;
+        font-size: 12px;
     }
 
     .about-breadcrumb {
         left: 0;
         bottom: 24px;
-
         gap: 9px;
-
         font-size: 11px;
     }
 }
@@ -2090,14 +2120,15 @@ body.dark-mode .about-breadcrumb span a:last-child {
     width: 100%;
     max-width: 480px;
 
-    margin: 18px auto 0;
+    margin: 18px 0 0;
 
     color: rgba(255, 255, 255, 0.78);
 
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
 
     line-height: 1.85;
+    text-align: left;
 }
 
 @media (max-width: 1024px) {
@@ -2176,11 +2207,12 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .mission-card p {
         max-width: 420px;
-
+        margin: 18px 0 0;
+        text-align: left;
         font-size: 13px;
-
         line-height: 1.75;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -2264,13 +2296,12 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     .mission-card p {
         max-width: 450px;
-
-        margin-top: 16px;
-
+        margin: 16px 0 0;
+        text-align: left;
         font-size: 13px;
-
         line-height: 1.75;
     }
+
 }
 
 .expertise-section {
@@ -2987,7 +3018,7 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     height: 1px;
 
-    background: var(--border);
+    background: var(--secondary);
 
     z-index: 0;
 }
@@ -3026,7 +3057,7 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     background: var(--white);
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 50%;
 
     transition:
@@ -3050,7 +3081,7 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     transform: translateX(-50%);
 
-    background: var(--border);
+    background: var(--secondary);
 
     border-radius: 50%;
 
@@ -3738,7 +3769,7 @@ body.dark-mode .about-breadcrumb span a:last-child {
     position: relative;
 
     width: 100%;
-    min-height: 680px;
+    min-height: 500px;
 
     display: flex;
     align-items: center;
@@ -3849,7 +3880,7 @@ body.dark-mode .about-breadcrumb span a:last-child {
 
     color: #ffffff;
 
-    font-size: 72px !important;
+    font-size: 60px !important;
     font-weight: 600;
 
     line-height: 1.05;
@@ -3930,11 +3961,13 @@ body.dark-mode .about-breadcrumb span a:last-child {
 }
 
 .final-cta-btn:hover::before {
-    transform: translateX(0);
+    background: var(--secondary);
+    color: var(--white);
 }
 
 .final-cta-btn:hover {
-    transform: translateY(-4px);
+      background: var(--secondary);
+    color: var(--white);
 }
 
 .final-cta-arrow {
@@ -3955,11 +3988,6 @@ body.dark-mode .about-breadcrumb span a:last-child {
 .final-cta-btn:hover .final-cta-arrow {
     transform: rotate(45deg);
 }
-
-
-/* =========================
-   DARK MODE
-========================= */
 
 body.dark-mode .final-cta {
     background: var(--black);

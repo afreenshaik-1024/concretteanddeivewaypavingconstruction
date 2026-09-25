@@ -76,6 +76,7 @@ a {
         background var(--transition),
         border-color var(--transition);
 }
+
 .nav-container {
     width: min(1180px, 92%);
     height: 100%;
@@ -106,6 +107,7 @@ a {
 
     position: relative;
 }
+
 .logo img {
     width: 82px;
     height: 80px;
@@ -116,6 +118,7 @@ a {
     display: block;
     flex-shrink: 0;
 }
+
 .logo > span {
     display: inline-block;
 
@@ -159,6 +162,7 @@ body.dark-mode .logo > span > span {
 body.dark-mode .logo small {
     color: var(--black);
 }
+
 @media (max-width: 1024px) {
 
     .logo img {
@@ -335,11 +339,9 @@ body.dark-mode .logo small {
 
     padding: 0 16px;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 11px;
-        
-    background: var(--secondary);
-    color: var(--white);
+    color: var(--black);
 
     font-size: 14px;
     font-weight: 600;
@@ -350,6 +352,7 @@ body.dark-mode .logo small {
 .action-btn:hover {
     border-color: var(--secondary);
     color: var(--white);
+    background: var(--secondary);
 }
 
 .theme-btn {
@@ -458,8 +461,6 @@ body.rtl .nav-actions {
     .action-btn {
         height: 46px;
         min-width: 46px;
-         background: var(--secondary);
-    color: var(--white);
     }
 
     .login-btn {
@@ -505,7 +506,6 @@ body.rtl .nav-actions {
         display: none;
     }
 
-
     .mobile-controls {
         display: flex;
 
@@ -513,6 +513,7 @@ body.rtl .nav-actions {
 
         gap: 7px;
     }
+
     .mobile-controls .mobile-icon {
         height: 42px;
         min-width: 42px;
@@ -567,7 +568,6 @@ body.rtl .nav-actions {
     .menu-toggle:hover {
         background: rgba(37, 99, 235, 0.08);
     }
-
     .mobile-menu {
         display: flex;
 
@@ -704,6 +704,19 @@ body {
     color: var(--secondary);
 }
 
+body.dark-mode .action-btn,
+body.dark-mode .action-btn i,
+body.dark-mode .theme-btn,
+body.dark-mode .theme-btn i {
+    color: #000000 !important;
+}
+
+body.dark-mode .mobile-controls .mobile-icon,
+body.dark-mode .mobile-controls .mobile-icon i,
+body.dark-mode .mobile-controls .theme-btn,
+body.dark-mode .mobile-controls .theme-btn i {
+    color: #000000 !important;
+}
 .footer {
     background: var(--white);
     color: var(--black);
@@ -905,7 +918,7 @@ body.dark-mode .footer-logo small {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--secondary);
     border-radius: 50%;
 
     color: var(--black);
@@ -1308,7 +1321,7 @@ body.dark-mode .footer-logo small {
 
     color: #ffffff;
 
-    font-size: clamp(52px, 7vw, 96px);
+    font-size: 70px;
     line-height: 0.98;
 
     font-weight: 700;
@@ -1839,7 +1852,7 @@ body.dark-mode .hero-scroll {
 
     color: var(--black);
 
-    font-size: clamp(44px, 5vw, 68px);
+    font-size: 50px;
 
     line-height: 1;
 
@@ -2150,7 +2163,7 @@ body.dark-mode .hero-scroll {
 .services-title h2 {
     color: var(--black);
 
-    font-size: clamp(46px, 5.5vw, 70px);
+    font-size: 55px;
 
     line-height: 0.98;
 
@@ -2376,8 +2389,6 @@ body.dark-mode .hero-scroll {
     font-size: 15px;
 
     font-weight: 700;
-
-    text-transform: uppercase;
 
     letter-spacing: 1px;
 
@@ -2629,7 +2640,7 @@ body.dark-mode .hero-scroll {
 .projects-title h2 {
     color: var(--black);
 
-    font-size: clamp(46px, 5.5vw, 70px);
+    font-size:55px;
 
     line-height: 0.98;
 
@@ -3126,7 +3137,7 @@ body.dark-mode .hero-scroll {
 .quality-heading h2 {
     margin: 0;
 
-    font-size: clamp(42px, 5vw, 68px);
+    font-size:55px;
     line-height: 1.05;
     font-weight: 700;
     letter-spacing: -2px;
@@ -3461,7 +3472,7 @@ body.dark-mode .hero-scroll {
     }
 
     .quality-heading h2 {
-        font-size: clamp(34px, 10vw, 48px);
+        font-size: 40px;
         line-height: 1.08;
         letter-spacing: -1.5px;
     }
@@ -3686,7 +3697,7 @@ body.dark-mode .quality-btn:hover {
     margin: 0 0 20px;
 
     color: var(--black);
-    font-size: clamp(36px, 4vw, 58px);
+    font-size: 50px;
     line-height: 1.08;
     font-weight: 800;
     letter-spacing: -1.5px;
@@ -4046,3 +4057,263 @@ body.dark-mode .quality-btn:hover {
     }
 }
 
+.premium-cta {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--black);
+}
+
+.premium-cta-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/project3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3;
+    transform: scale(1.02);
+    transition: transform 8s ease;
+}
+
+.premium-cta:hover .premium-cta-bg {
+    transform: scale(1.08);
+}
+
+.premium-cta-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 6, 11, 0.88) 0%,
+            rgba(3, 6, 11, 0.68) 48%,
+            rgba(3, 6, 11, 0.48) 100%
+        );
+    z-index: -2;
+}
+
+.premium-cta-content {
+    width: min(900px, 90%);
+    margin: 0 auto;
+    padding: 35px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.premium-cta-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.premium-cta-label::before,
+.premium-cta-label::after {
+    content: "";
+    width: 24px;
+    height: 1px;
+    background: var(--primary);
+}
+
+.premium-cta-content h2 {
+    margin: 0 auto;
+    max-width: 850px;
+    color: #ffffff;
+    font-size: 38px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.premium-cta-content h2 span {
+    display: inline;
+    color: var(--primary);
+}
+
+.premium-cta-content p {
+    max-width: 600px;
+    margin: 12px auto 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.premium-cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.premium-cta-btn {
+    min-width: 160px;
+    min-height: 44px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+.premium-cta-btn i {
+    font-size: 12px;
+    transition: transform var(--transition);
+}
+
+.premium-cta-btn:hover i {
+    transform: translateX(5px);
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: #ffffff;
+    border: 1px solid var(--primary);
+}
+
+.primary-btn:hover {
+    background: var(--secondary);
+    color: #ffffff;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.secondary-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: #ffffff;
+}
+
+.premium-cta-trust {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.trust-item i {
+    color: var(--primary);
+    font-size: 13px;
+}
+@media (max-width: 1024px) {
+
+    .premium-cta {
+        min-height: 200px;
+        margin-top: 60px;
+    }
+
+    .premium-cta-content {
+        width: 88%;
+        padding: 32px 0;
+    }
+
+    .premium-cta-content h2 {
+        font-size: 36px;
+    }
+
+    .premium-cta-content p {
+        max-width: 580px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .premium-cta {
+        min-height: 200px;
+        margin-top: 45px;
+    }
+
+    .premium-cta-bg {
+        background-position: center;
+    }
+
+    .premium-cta-overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(3, 6, 11, 0.82),
+                rgba(3, 6, 11, 0.76)
+            );
+    }
+
+    .premium-cta-content {
+        width: 90%;
+        padding: 32px 0;
+    }
+
+    .premium-cta-content h2 {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .premium-cta-content p {
+        font-size: 12px;
+        line-height: 1.6;
+        margin-top: 10px;
+    }
+
+    .premium-cta-buttons {
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .premium-cta-btn {
+        min-width: 145px;
+        min-height: 42px;
+        padding: 0 16px;
+        font-size: 11px;
+    }
+
+    .premium-cta-trust {
+        gap: 12px;
+        margin-top: 18px;
+        padding-top: 10px;
+    }
+
+    .trust-item {
+        font-size: 10px;
+    }
+
+}
