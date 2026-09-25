@@ -1020,7 +1020,7 @@ body.dark-mode .quote-control-btn:hover {
 }
 
 .quote-brand-name {
-    color: #ffffff;
+    color: var(--primary);
 
     font-size: 25px;
     font-weight: 800;
@@ -1030,7 +1030,7 @@ body.dark-mode .quote-control-btn:hover {
 }
 
 .quote-brand-name span {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .quote-brand-text small {
