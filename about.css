@@ -469,6 +469,7 @@ body.rtl .nav-actions {
     }
 }
 
+
 @media (max-width: 768px) {
 
     .navbar {
@@ -508,9 +509,7 @@ body.rtl .nav-actions {
 
     .mobile-controls {
         display: flex;
-
         align-items: center;
-
         gap: 7px;
     }
 
@@ -529,7 +528,16 @@ body.rtl .nav-actions {
         font-size: 13px;
         font-weight: 600;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         transition: all var(--transition);
+    }
+
+    .mobile-controls .mobile-icon i {
+        color: inherit;
+        font-size: 16px;
     }
 
     .mobile-controls .mobile-icon:hover {
@@ -539,6 +547,7 @@ body.rtl .nav-actions {
 
     .mobile-controls .theme-btn {
         width: 42px;
+        min-width: 42px;
         padding: 0;
 
         display: flex;
@@ -548,6 +557,7 @@ body.rtl .nav-actions {
 
     .mobile-controls .theme-btn i {
         font-size: 16px;
+        color: inherit;
     }
 
     .menu-toggle {
@@ -562,12 +572,17 @@ body.rtl .nav-actions {
 
         font-size: 22px;
 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         transition: all var(--transition);
     }
 
     .menu-toggle:hover {
         background: rgba(37, 99, 235, 0.08);
     }
+
     .mobile-menu {
         display: flex;
 
@@ -642,7 +657,49 @@ body.rtl .nav-actions {
     body.rtl .mobile-menu {
         direction: rtl;
     }
+
+    body.rtl .mobile-controls {
+        direction: ltr;
+    }
+
+    body.dark-mode .mobile-controls .mobile-icon {
+        background: var(--white);
+        border-color: var(--border);
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-controls .mobile-icon i {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-controls .theme-btn {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-controls .theme-btn i {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .menu-toggle {
+        color: var(--primary) !important;
+    }
+
+    body.dark-mode .mobile-menu {
+        background: var(--white);
+        border-color: var(--border);
+    }
+
+    body.dark-mode .mobile-menu > a {
+        color: var(--black);
+    }
+
+    body.dark-mode .mobile-menu > a:hover {
+        color: var(--secondary);
+        background: var(--light);
+    }
 }
+
+
 html {
     overflow-x: clip;
 }
@@ -657,20 +714,29 @@ body {
     top: 0 !important;
     z-index: 99999 !important;
 }
+
+
 .mobile-nav-dropdown {
     width: 100%;
 }
 
 .mobile-home-toggle {
     width: 100%;
+
     padding: 13px 15px;
+
     border: 0;
+
     background: transparent;
+
     color: var(--black);
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     font: inherit;
+
     cursor: pointer;
 }
 
@@ -684,6 +750,7 @@ body {
 
 .mobile-dropdown-menu {
     display: none;
+
     padding-left: 15px;
 }
 
@@ -693,9 +760,13 @@ body {
 
 .mobile-dropdown-menu a {
     display: block;
+
     padding: 10px 15px;
+
     color: var(--black);
+
     font-size: 14px;
+
     text-decoration: none;
 }
 
@@ -704,18 +775,50 @@ body {
     color: var(--secondary);
 }
 
+
 body.dark-mode .action-btn,
 body.dark-mode .action-btn i,
 body.dark-mode .theme-btn,
 body.dark-mode .theme-btn i {
-    color: #000000 !important;
+    color: #ffffff !important;
 }
+
 
 body.dark-mode .mobile-controls .mobile-icon,
 body.dark-mode .mobile-controls .mobile-icon i,
 body.dark-mode .mobile-controls .theme-btn,
 body.dark-mode .mobile-controls .theme-btn i {
-    color: #000000 !important;
+    color: #ffffff !important;
+}
+
+
+@media (max-width: 768px) {
+
+    body.dark-mode .mobile-controls .mobile-icon {
+        background: var(--white) !important;
+        border-color: var(--border) !important;
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-controls .mobile-icon i {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-controls .theme-btn {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-controls .theme-btn i {
+        color: #ffffff !important;
+    }
+
+    body.dark-mode .mobile-home-toggle {
+        color: var(--black);
+    }
+
+    body.dark-mode .mobile-dropdown-menu a {
+        color: var(--black);
+    }
 }
 .footer {
     background: var(--white);
