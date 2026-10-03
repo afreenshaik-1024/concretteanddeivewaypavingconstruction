@@ -981,9 +981,6 @@ body.dark-mode .quote-control-btn:hover {
     }
 
 }
-/* =========================
-   PAVEPRO BRAND - LEFT SIDE
-========================= */
 
 .quote-brand {
     position: fixed;
@@ -1049,11 +1046,6 @@ body.dark-mode .quote-control-btn:hover {
     transform: scale(1.05);
 }
 
-
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 1024px) {
 
     .quote-brand {
@@ -1075,11 +1067,6 @@ body.dark-mode .quote-control-btn:hover {
     }
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 768px) {
 
     .quote-brand {
@@ -1100,5 +1087,126 @@ body.dark-mode .quote-control-btn:hover {
     .quote-brand-text small {
         font-size: 8px;
         letter-spacing: 0.4px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .quote-page {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        padding: 0 12px 30px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .quote-container {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .quote-info {
+        width: 100%;
+        padding: 115px 0 0 !important;
+        margin: 0;
+        text-align: center;
+        position: relative;
+    }
+
+    .quote-label {
+        display: block;
+        position: static !important;
+        transform: none !important;
+        margin: 0 0 14px !important;
+        font-size: 10px;
+        line-height: 1.2;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    .quote-info h1 {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto 14px !important;
+        max-width: 100%;
+        font-size: 30px;
+        line-height: 1.08;
+    }
+
+    .quote-info h1 span {
+        display: block;
+        margin-top: 2px;
+    }
+
+    .quote-info > p {
+        margin: 0 auto 18px;
+        font-size: 11px;
+        line-height: 1.6;
+        max-width: 330px;
+    }
+
+    .quote-points {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .quote-form-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 25px auto 0;
+        padding: 62px 15px 20px;
+        border-radius: 13px;
+    }
+
+    .quote-brand {
+        position: fixed !important;
+        top: 18px !important;
+        left: 18px !important;
+        right: auto !important;
+        bottom: auto !important;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: max-content;
+        max-width: calc(100vw - 36px);
+    }
+
+    .quote-brand img {
+        width: 43px;
+        height: 43px;
+        flex-shrink: 0;
+    }
+
+    .quote-brand-text {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+    }
+
+    .quote-brand-text strong,
+    .quote-brand-text .brand-name {
+        font-size: 19px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .quote-brand-text small,
+    .quote-brand-text .brand-tagline {
+        font-size: 8px;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .quote-top-controls {
+        top: 12px;
+        right: 12px;
     }
 }

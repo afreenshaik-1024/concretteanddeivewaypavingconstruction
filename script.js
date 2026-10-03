@@ -892,3 +892,41 @@ document.addEventListener(
 
     }
 );
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const homeDropdown =
+        document.querySelector(".nav-dropdown");
+
+    const homeLink =
+        document.querySelector(".home-link");
+
+    if (!homeDropdown || !homeLink) return;
+
+    homeLink.addEventListener("click", function (event) {
+
+        if (!homeDropdown.classList.contains("open")) {
+
+            event.preventDefault();
+
+            homeDropdown.classList.add("open");
+
+        } else {
+
+            homeDropdown.classList.remove("open");
+
+        }
+
+    });
+
+    document.addEventListener("click", function (event) {
+
+        if (!homeDropdown.contains(event.target)) {
+
+            homeDropdown.classList.remove("open");
+
+        }
+
+    });
+
+});
